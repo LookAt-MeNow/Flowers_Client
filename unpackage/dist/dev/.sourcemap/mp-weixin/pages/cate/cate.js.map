@@ -1,0 +1,1 @@
+{"version":3,"file":"cate.js","sources":["G:/Download/HBuilderX/plugins/uniapp-cli-vite/uniPage:/cGFnZXMvY2F0ZS9jYXRlLnZ1ZQ"],"sourcesContent":["import MiniProgramPage from 'E:/bishe/flower_shop/pages/cate/cate.vue'\nwx.createPage(MiniProgramPage)"],"names":[],"mappings":";;;;;;;;;;;AACA,GAAG,WAAW,eAAe;"}
