@@ -6,6 +6,8 @@ if (!Math) {
   "./pages/cate/cate.js";
   "./pages/cart/cart.js";
   "./pages/my/my.js";
+  "./subpkg/goods_detail/goods_detail.js";
+  "./subpkg/goods_list/goods_list.js";
 }
 const _sfc_main = {
   onLaunch: function() {
@@ -18,6 +20,23 @@ const _sfc_main = {
   onHide: function() {
     common_vendor.index.__f__("log", "at App.vue:11", "App Hide");
   }
+};
+common_vendor.index.$http = common_vendor.$http;
+common_vendor.$http.baseUrl = "http://43.139.117.157:8080";
+common_vendor.index.$showMsg = function(title = "数据加载失败！", duration = 1500) {
+  common_vendor.index.showToast({
+    title,
+    duration,
+    icon: "none"
+  });
+};
+common_vendor.$http.beforeRequest = function(options) {
+  common_vendor.index.showLoading({
+    title: "数据加载中..."
+  });
+};
+common_vendor.$http.afterRequest = function() {
+  common_vendor.index.hideLoading();
 };
 function createApp() {
   const app = common_vendor.createSSRApp(_sfc_main);
