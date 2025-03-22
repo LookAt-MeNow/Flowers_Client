@@ -7,8 +7,8 @@ uni.$http = $http
 //http://43.139.117.157:8080/
 //'/api/public/v1/home/catitems
 // /api/public/v1/home/floordata
-$http.baseUrl = 'http://43.139.117.157:8080'
-
+//$http.baseUrl = 'http://43.139.117.157:8080'
+$http.baseUrl = 'http://chenfei.site:8080'
 //封装弹窗
 // 封装的展示消息提示的方法
 uni.$showMsg = function (title = '数据加载失败！', duration = 1500) {

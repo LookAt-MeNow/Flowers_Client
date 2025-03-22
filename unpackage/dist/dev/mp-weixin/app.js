@@ -22,7 +22,7 @@ const _sfc_main = {
   }
 };
 common_vendor.index.$http = common_vendor.$http;
-common_vendor.$http.baseUrl = "http://43.139.117.157:8080";
+common_vendor.$http.baseUrl = "http://chenfei.site:8080";
 common_vendor.index.$showMsg = function(title = "数据加载失败！", duration = 1500) {
   common_vendor.index.showToast({
     title,
