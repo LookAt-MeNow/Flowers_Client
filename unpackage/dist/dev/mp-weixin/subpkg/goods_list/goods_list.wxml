@@ -1,1 +1,1 @@
-<view></view>
+<view><view class="goods-list"><view wx:for="{{a}}" wx:for-item="item" wx:key="c" bindtap="{{item.d}}"><my-goods wx:if="{{item.b}}" u-i="{{item.a}}" bind:__l="__l" u-p="{{item.b}}"></my-goods></view></view></view>
