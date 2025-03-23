@@ -1,5 +1,9 @@
 <template>
    <view>
+      <!-- 使用自定义的搜索组件 -->
+      <view class="search-box">
+        <my-search @click="gotoSearch"></my-search>
+      </view>
      <!-- 轮播图区域 -->
      <swiper :indicator-dots="true" :autoplay="true" :interval="3000" 
     :duration="1000" :circular="true">
@@ -11,16 +15,13 @@
          </navigator>
        </swiper-item>
      </swiper>
-   </view>
-   
-   <!-- 分类导航 -->
-   <!-- 分类导航区域 -->
+    <!-- 分类导航 -->
+    <!-- 分类导航区域 -->
     <view class="nav-list">
       <view class="nav-item" v-for="(item, i) in navList" :key="i" @click="navClickHandler(item)">
         <image :src="item.image_src" class="nav-img"></image>
       </view>
     </view>
-    
     <!-- 楼层区域 -->
     <view class="floor-list">
     <!-- 楼层 item 项 -->
@@ -44,6 +45,7 @@
             </view>
           </view>
       </view>
+     </view>
     </view>
  </template>
 
@@ -109,7 +111,12 @@
           })
          this.floorList = res.message
          console.log(res)
-       }
+       },
+      gotoSearch() {
+        uni.navigateTo({
+        url: '/subpkg/search/search'
+        })
+      }
     }
   }
 </script>
@@ -149,4 +156,12 @@
     flex-wrap: wrap;
     justify-content: space-around;
     }
+  .search-box {
+    // 设置定位效果为“吸顶”
+    position: sticky;
+    // 吸顶的“位置”
+    top: 0;
+    // 提高层级，防止被轮播图覆
+    z-index: 999;
+  }
 </style>
