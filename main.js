@@ -3,11 +3,11 @@ import { $http } from '@escook/request-miniprogram'
 
 uni.$http = $http
 // 配置请求根路径
-//$http.baseUrl = 'https://api-hmugo-web.itheima.net'
+//$http.baseUrl = 'https://api-hmugo-web.itheima.net/api/public/v1/goods/qsearch'
 //http://43.139.117.157:8080/
 //'/api/public/v1/home/catitems
 // /api/public/v1/home/floordata
-$http.baseUrl = 'http://43.139.117.157:8080'
+$http.baseUrl = 'http://chenfei.site:8080'
 
 //封装弹窗
 // 封装的展示消息提示的方法
