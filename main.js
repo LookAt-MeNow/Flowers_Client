@@ -8,6 +8,7 @@ uni.$http = $http
 //'/api/public/v1/home/catitems
 // /api/public/v1/home/floordata
 //$http.baseUrl = 'https://api-hmugo-web.itheima.net'
+//http://chenfei.site:8080/api/public/v1/goods/detail?goods_id=15
 $http.baseUrl = 'http://43.139.117.157:8080'
 
 //封装弹窗
